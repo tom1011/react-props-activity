@@ -6,12 +6,22 @@ class CurrentTotal extends Component {
         history: [],
     }
 
-    render() {
+    historyUpdate = () => {
+        console.log('in history update')
         console.log(this.props.Total)
+        this.setState ({
+            history: [...this.state.history, this.props.Total]
+        } )  
+    }
+
+
+
+    render() {
+        console.log(this.state.history);
         return (
             <>
                 <p>Total = {this.props.Total}</p>
-                <button>Save</button>
+                <button onClick={this.historyUpdate}>Save</button>
                 <p>Click save above to save the current total in history</p>
                 <History history = {this.state.history}/>
             </>
