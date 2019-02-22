@@ -3,7 +3,7 @@ import CurrentTotal from '../CurrentTotal/CurrentTotal';
 
 class EnderNumber extends Component {
     state = {
-        currentTotal: 0
+        currentTotal: 0,
     }
 
     render() {
@@ -14,7 +14,7 @@ class EnderNumber extends Component {
                 <button>Up</button>
                 <input />
                 <button>Down</button>
-                <CurrentTotal Total = {this.state.currentTotal}/>
+                <CurrentTotal Total = {this.state.currentTotal} />
             </>
         );
     }
